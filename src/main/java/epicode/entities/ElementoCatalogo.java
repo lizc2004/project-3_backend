@@ -18,7 +18,10 @@ public abstract class ElementoCatalogo {
     @Column(nullable = false)
     private String titolo;
 
+    @Column(name = "anno_pubblicazione")
     private int annoPubblicazione;
+
+    @Column(name = "numero_pagine")
     private int numeroPagine;
 
     @OneToMany(mappedBy = "elemento", cascade = CascadeType.REMOVE)

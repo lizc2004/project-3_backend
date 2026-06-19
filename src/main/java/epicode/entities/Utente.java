@@ -18,9 +18,10 @@ public class Utente {
     @Column(nullable = false)
     private String cognome;
 
+    @Column(name = "data_nascita")
     private LocalDate dataNascita;
 
-    @Column(unique = true, nullable = false)
+    @Column(name = "numero_tessera", unique = true, nullable = false)
     private String numeroTessera;
 
     @OneToMany(mappedBy = "utente", cascade = CascadeType.REMOVE)

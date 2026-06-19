@@ -19,10 +19,13 @@ public class Prestito {
     @JoinColumn(name = "elemento_id")
     private ElementoCatalogo elemento;
 
-    @Column(nullable = false)
+    @Column(name = "data_inizio_prestito", nullable = false)
     private LocalDate dataInizioPrestito;
 
+    @Column(name = "data_restituzione_prevista")
     private LocalDate dataRestituzionePrevista;
+
+    @Column(name = "data_restituzione_effettiva")
     private LocalDate dataRestituzioneEffettiva;
 
     public Prestito() {
